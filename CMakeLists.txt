@@ -3,4 +3,4 @@ project(CPP_CA1)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(CPP_CA1 main.cpp)
+add_executable(CPP_CA1 FootballData.cpp)
