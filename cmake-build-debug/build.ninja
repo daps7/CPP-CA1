@@ -49,8 +49,8 @@ cmake_ninja_workdir = C$:/Users/dylan/CLionProjects/CPP-CA1/cmake-build-debug/
 
 build cmake_object_order_depends_target_CPP_CA1: phony || .
 
-build CMakeFiles/CPP_CA1.dir/FootballData.cpp.obj: CXX_COMPILER__CPP_CA1_unscanned_Debug C$:/Users/dylan/CLionProjects/CPP-CA1/FootballData.cpp || cmake_object_order_depends_target_CPP_CA1
-  DEP_FILE = CMakeFiles\CPP_CA1.dir\FootballData.cpp.obj.d
+build CMakeFiles/CPP_CA1.dir/main.cpp.obj: CXX_COMPILER__CPP_CA1_unscanned_Debug C$:/Users/dylan/CLionProjects/CPP-CA1/main.cpp || cmake_object_order_depends_target_CPP_CA1
+  DEP_FILE = CMakeFiles\CPP_CA1.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\CPP_CA1.dir
   OBJECT_FILE_DIR = CMakeFiles\CPP_CA1.dir
@@ -63,7 +63,7 @@ build CMakeFiles/CPP_CA1.dir/FootballData.cpp.obj: CXX_COMPILER__CPP_CA1_unscann
 #############################################
 # Link the executable CPP_CA1.exe
 
-build CPP_CA1.exe: CXX_EXECUTABLE_LINKER__CPP_CA1_Debug CMakeFiles/CPP_CA1.dir/FootballData.cpp.obj
+build CPP_CA1.exe: CXX_EXECUTABLE_LINKER__CPP_CA1_Debug CMakeFiles/CPP_CA1.dir/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\CPP_CA1.dir
