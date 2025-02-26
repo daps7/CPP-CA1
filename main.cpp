@@ -26,7 +26,7 @@ vector<Player> loadCSV(const string &filename) {
         cerr << "Error opening file!" << endl;
         return data;
     }
-    getline(file, line);  // Skip header line
+    getline(file, line);
     while (getline(file, line)) {
         stringstream ss(line);
         Player record;
@@ -44,7 +44,7 @@ vector<Player> loadCSV(const string &filename) {
     file.close();
     return data;
 }
-
+//displaying data
 void displayData(const vector<Player> &data) {
     cout << left << setw(10) << "ID" << setw(15) << "First Name" << setw(15) << "Last Name"
          << setw(10) << "Goals" << setw(15) << "Matches Played" << endl;
@@ -66,7 +66,7 @@ int searchByPlayerID(const vector<Player> &data, int playerID) {
 
 map<string, int> countByLastName(const vector<Player> &data) {
     map<string, int> lastNameCounts;
-    for (const &record : data) {
+    for (const auto &record : data) {
         lastNameCounts[record.lastName]++;
     }
     return lastNameCounts;
@@ -82,15 +82,15 @@ void displayByLastName(const vector<Player> &data, const string &lastName) {
 
 pair<Player, Player> findMinMaxGoals(const vector<Player> &data, double &average) {
     if (data.empty()) return {};
-    Player best = data[0], worst = data[0];
+    Player most = data[0], lowest = data[0];
     int totalGoals = 0;
     for (const auto &record : data) {
         totalGoals += record.goals;
-        if (record.goals > best.goals) best = record;
-        if (record.goals < worst.goals) worst = record;
+        if (record.goals > most.goals) most = record;
+        if (record.goals < lowest.goals) lowest = record;
     }
     average = static_cast<double>(totalGoals) / data.size();
-    return {best, worst};
+    return {most, lowest};
 }
 
 vector<Player> searchPartialMatch(const vector<Player> &data, const string &query) {
