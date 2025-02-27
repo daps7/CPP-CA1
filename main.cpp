@@ -112,6 +112,7 @@ void sortDescendingByMatchesPlayed(vector<Player> &data) {
 void menu(vector<Player> &data) {
     int choice, playerID;
     string input;
+    cout <<"*********************************************\n*******Welcome To My Football Data Menu******\n*********************************************"<< endl;
     do {
         cout << "\n1. Display Data\n2. Search by Player ID\n3. Count by Last Name\n4. Display by Last Name";
         cout << "\n5. Get Min/Max/Average Goals\n6. Search Partial Match\n7. Sort by Matches Played\n8. Exit\nChoice: ";
